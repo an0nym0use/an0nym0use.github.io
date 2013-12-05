@@ -1,13 +1,16 @@
 ---
 layout: default
-title: Your New Jekyll Site
+title: Andrew King
+excerpt_separator: </p>
 ---
 
-<div id="home">
-  <h1>Blog Posts</h1>
+<section>
   <ul class="posts">
     {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+      <li>
+        <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+        {{ post.excerpt }}
+      </li>
     {% endfor %}
   </ul>
-</div>
+</section>
